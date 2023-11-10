@@ -1,4 +1,4 @@
-from BaseParser import BaseParser
+from Parsers.BaseParser import BaseParser
 import re
 class ForaParser(BaseParser):
 

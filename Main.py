@@ -1,9 +1,8 @@
 import asyncio
-from Configurer import Configurer
-from ContentService import ContentService
-from GoodDTO import GoodDTO
+from Services.Configurer import Configurer
+from Services.ContentService import ContentService
+from Model.GoodDTO import GoodDTO
 from PriceFabric import PriceFabric
-
 
 goods = Configurer.load_goods_from_json()
 

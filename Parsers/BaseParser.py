@@ -3,9 +3,9 @@ from datetime import datetime
 from debugpy import configure
 from pyppeteer import launch
 import re
-from Configurer import Configurer
+from Services.Configurer import Configurer
 
-from Price import Price
+from Model.Price import Price
 
 class BaseParser:
 

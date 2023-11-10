@@ -1,13 +1,12 @@
 import asyncio
-from ContentService import ContentService
-from EpikParser import EpikParser
-from EvaParser import EvaParser
-from ForaParser import ForaParser
-from Good import Good
 import tracemalloc
-from GoodDTO import GoodDTO
-
-from Price import Price
+from Services.ContentService import ContentService
+from Parsers.EpikParser import EpikParser
+from Parsers.EvaParser import EvaParser
+from Parsers.ForaParser import ForaParser
+from Model.Good import Good
+from Model.GoodDTO import GoodDTO
+from Model.Price import Price
 
 class PriceFabric:
 

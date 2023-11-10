@@ -1,7 +1,7 @@
 import configparser
 import json
 
-from GoodDTO import GoodDTO
+from Model.GoodDTO import GoodDTO
 
 class Configurer:
     executable_path = None  # Class-level variable to store the executable path
