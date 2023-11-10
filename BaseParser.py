@@ -1,7 +1,9 @@
 import asyncio
 from datetime import datetime
+from debugpy import configure
 from pyppeteer import launch
 import re
+from Configurer import Configurer
 
 from Price import Price
 
@@ -9,9 +11,7 @@ class BaseParser:
 
     def __init__(self):
         self.goods = []
-        self.prices = []
-
-    executable_path = "C:\\Users\\a.sotnikov\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\\LocalCache\\Local\\pyppeteer\\pyppeteer\\local-chromium\\588429\\chrome-win\\chrome.exe"
+        self.prices = []    
 
     custom_headers = {
         'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/109.0',
@@ -32,7 +32,7 @@ class BaseParser:
         return 123
 
     async def FillPrice(self):
-        browser = await launch(headless=True, executablePath=self.executable_path)    
+        browser = await launch(headless=True, executablePath=Configurer.GetExecPath())    
         for good in self.goods:
             product_price = await self.get_product_price(browser, good.url)
             # print(f"{product_price}")
